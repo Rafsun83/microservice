@@ -1,0 +1,68 @@
+version: "3.8"
+
+services:
+
+  self_management_1:
+    build: ./self_management
+    container_name: self_management_1
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/self_management
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password
+    expose:
+      - "8080"
+    networks:
+      - microservice_default
+
+  self_management_2:
+    build: ./self_management
+    container_name: self_management_2
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/self_management
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password
+    expose:
+      - "8080"
+    networks:
+      - microservice_default
+
+  mysql:
+    image: mysql:8.0.36
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: self_management
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - microservice_default
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-server
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - self_management_1
+      - self_management_2
+    networks:
+      - microservice_default
+
+volumes:
+  mysql_data:
+
+networks:
+  microservice_default:
+    driver: bridge
