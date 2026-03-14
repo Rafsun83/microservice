@@ -49,6 +49,7 @@ services:
   nginx:
     image: nginx:latest
     container_name: nginx-server
+    restart: always
     ports:
       - "8081:80"
     volumes:
