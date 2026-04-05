@@ -3,6 +3,7 @@
 ## Maven install in your application
 ``sudo apt install maven``
 ## Clean maven or build
+``mvn clean install``
 
 ``mvn clean``
 ## Added swagger for API Documentation 
@@ -186,3 +187,8 @@ com.example.authdemo
 3. Go to advance setting bottom of the settings and check allow auto-make to start
 4. Then reload or newly start IDE
 5. Change any method and test.
+
+### When move to project one folder to another folder
+For each service:
+Open user-service/pom.xml
+Click “Add as Maven Project”

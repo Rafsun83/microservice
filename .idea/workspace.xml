@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/narcos/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/microservice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="3ArGRsL0ctBFZkoqzFZGaMiYmHk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/rafsun/Desktop/Practice projects/narcos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/narcos/src/main/java/com/example/narcos" />
+      <recent name="$PROJECT_DIR$/narcos/src/main/java" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="" />
+      <created>1773343271253</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773343271253</updated>
+      <workItem from="1773343272528" duration="927000" />
+      <workItem from="1773344211170" duration="4094000" />
+      <workItem from="1773428314600" duration="4405000" />
+      <workItem from="1773475041939" duration="4920000" />
+      <workItem from="1773481993548" duration="29000" />
+      <workItem from="1773482385293" duration="1065000" />
+      <workItem from="1773519527737" duration="6372000" />
+      <workItem from="1773606086778" duration="254000" />
+      <workItem from="1773606354429" duration="477000" />
+      <workItem from="1773606844300" duration="596000" />
+      <workItem from="1773607453543" duration="532000" />
+      <workItem from="1773649411350" duration="5869000" />
+      <workItem from="1774961020978" duration="594000" />
+      <workItem from="1774961625679" duration="726000" />
+      <workItem from="1774974551488" duration="1153000" />
+      <workItem from="1774980717260" duration="3170000" />
+      <workItem from="1775131697507" duration="3323000" />
+      <workItem from="1775331421702" duration="16000" />
+      <workItem from="1775332153144" duration="663000" />
+      <workItem from="1775370787528" duration="2802000" />
+      <workItem from="1775374366891" duration="76000" />
+      <workItem from="1775374455547" duration="96000" />
+      <workItem from="1775374565358" duration="166000" />
+      <workItem from="1775374745330" duration="1531000" />
+      <workItem from="1775376570456" duration="122000" />
+      <workItem from="1775376709411" duration="741000" />
+      <workItem from="1775377552152" duration="14720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/self_management" />
+    </ignored-roots>
+  </component>
+</project>

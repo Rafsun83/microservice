@@ -32,6 +32,15 @@ services:
     networks:
       - microservice_default
 
+  narcos_1:
+    build: ./narcos
+    container_name: narcos_1
+    restart: always
+    expose:
+      - "8080"
+    networks:
+      - microservice_default
+
   mysql:
     image: mysql:8.0.36
     container_name: mysql-db
@@ -58,6 +67,7 @@ services:
     depends_on:
       - self_management_1
       - self_management_2
+      - narcos_1
     networks:
       - microservice_default
 
