@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/narcos/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/microservice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_management/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/narcos/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/narcos/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +22,20 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="3ArGRsL0ctBFZkoqzFZGaMiYmHk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/rafsun/Desktop/Practice projects/narcos",
+    "last_opened_file_path": "/home/rafsun-jani/Desktop/Personal/JavaB7/microservice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +97,7 @@
       <workItem from="1775376570456" duration="122000" />
       <workItem from="1775376709411" duration="741000" />
       <workItem from="1775377552152" duration="14720000" />
+      <workItem from="1775708349884" duration="2391000" />
     </task>
     <servers />
   </component>
