@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/narcos/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/narcos/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_management/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/Dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +25,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -97,7 +93,7 @@
       <workItem from="1775376570456" duration="122000" />
       <workItem from="1775376709411" duration="741000" />
       <workItem from="1775377552152" duration="14720000" />
-      <workItem from="1775708349884" duration="2391000" />
+      <workItem from="1775708349884" duration="2842000" />
     </task>
     <servers />
   </component>
