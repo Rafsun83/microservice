@@ -38,6 +38,10 @@ services:
     restart: always
     expose:
       - "8080"
+    depends_on:
+      - mongodb
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://root:rafsun150968@mongodb:27017/narcos_db?authSource=admin
     networks:
       - microservice_default
 
@@ -49,7 +53,7 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: self_management
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
