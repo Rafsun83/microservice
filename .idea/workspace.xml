@@ -7,7 +7,7 @@
     <list default="true" id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/narcos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/narcos/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Rafsun83"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Rafsun83/microservice.git",
+    "accountId": "5feeadb5-75cf-4db1-9ab4-a39261c7a783"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -98,6 +110,7 @@
       <workItem from="1775376709411" duration="741000" />
       <workItem from="1775377552152" duration="14720000" />
       <workItem from="1775708349884" duration="9001000" />
+      <workItem from="1776323550136" duration="5452000" />
     </task>
     <servers />
   </component>
