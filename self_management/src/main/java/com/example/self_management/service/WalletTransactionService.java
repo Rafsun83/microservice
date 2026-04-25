@@ -2,6 +2,7 @@ package com.example.self_management.service;
 
 import com.example.self_management.enums.walletsTransaction.TransactionType;
 import com.example.self_management.mapper.WalletTransactionMapper;
+import com.example.self_management.model.domain.MoneyAddedEvent;
 import com.example.self_management.model.domain.WalletTransaction;
 import com.example.self_management.model.dto.walletTransaction.CreateWalletTransactionRequest;
 import com.example.self_management.persistence.entity.WalletEntity;
@@ -9,6 +10,7 @@ import com.example.self_management.persistence.entity.WalletTransactionEntity;
 import com.example.self_management.persistence.repository.WalletRepository;
 import com.example.self_management.persistence.repository.WalletTransactionRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -20,11 +22,14 @@ public class WalletTransactionService {
     private final WalletTransactionRepository walletTransactionRepository;
     private final WalletTransactionMapper walletTransactionMapper;
     private final WalletRepository walletRepository;
+    private final ApplicationEventPublisher eventPublisher;   // ← inject this
 
-    public WalletTransactionService(WalletTransactionRepository walletTransactionRepository, WalletTransactionMapper walletTransactionMapper, WalletRepository walletRepository) {
+
+    public WalletTransactionService(WalletTransactionRepository walletTransactionRepository, WalletTransactionMapper walletTransactionMapper, WalletRepository walletRepository, ApplicationEventPublisher eventPublisher) {
         this.walletTransactionRepository = walletTransactionRepository;
         this.walletTransactionMapper = walletTransactionMapper;
         this.walletRepository = walletRepository;
+        this.eventPublisher = eventPublisher;
     }
 
     public List<WalletTransaction> getAllWalletTransaction(Long walletId) {
@@ -54,7 +59,19 @@ public class WalletTransactionService {
         //Save wallet with updated balance
         walletRepository.save(wallet);
 
+        //Create and Save Transaction
        var saveTransaction  = walletTransactionRepository.save(transaction);
+
+        // --- Publish event AFTER successful save ---
+        eventPublisher.publishEvent(new MoneyAddedEvent(
+                this,
+"sumaiyaanika23@gmail.com",
+"Sumaiya Anika",
+                createWalletTransactionRequest.amount(),
+                wallet.getTotalAmount(),
+                "1"
+        ));
+
        return walletTransactionMapper.entityToWalletTransactionDomain(saveTransaction);
 
     }
