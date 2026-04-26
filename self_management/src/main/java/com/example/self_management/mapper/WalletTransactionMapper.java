@@ -17,7 +17,6 @@ public class WalletTransactionMapper {
         BeanUtils.copyProperties(walletTransactionEntity, walletTransaction);
         return walletTransaction;
 
-
     }
 
     public WalletTransactionEntity createWalletTransactionToEntity(CreateWalletTransactionRequest createWalletTransactionRequest) {

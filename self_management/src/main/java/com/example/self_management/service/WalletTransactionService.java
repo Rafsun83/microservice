@@ -4,17 +4,22 @@ import com.example.self_management.enums.walletsTransaction.TransactionType;
 import com.example.self_management.mapper.WalletTransactionMapper;
 import com.example.self_management.model.domain.MoneyAddedEvent;
 import com.example.self_management.model.domain.WalletTransaction;
+import com.example.self_management.model.dto.user.AuthenticatedUser;
 import com.example.self_management.model.dto.walletTransaction.CreateWalletTransactionRequest;
 import com.example.self_management.persistence.entity.WalletEntity;
 import com.example.self_management.persistence.entity.WalletTransactionEntity;
 import com.example.self_management.persistence.repository.WalletRepository;
 import com.example.self_management.persistence.repository.WalletTransactionRepository;
+import com.example.self_management.utils.SecurityUtils;
+import io.jsonwebtoken.Claims;
 import jakarta.transaction.Transactional;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
@@ -23,13 +28,15 @@ public class WalletTransactionService {
     private final WalletTransactionMapper walletTransactionMapper;
     private final WalletRepository walletRepository;
     private final ApplicationEventPublisher eventPublisher;   // ← inject this
+    private final JwtService jwtService;
 
 
-    public WalletTransactionService(WalletTransactionRepository walletTransactionRepository, WalletTransactionMapper walletTransactionMapper, WalletRepository walletRepository, ApplicationEventPublisher eventPublisher) {
+    public WalletTransactionService(WalletTransactionRepository walletTransactionRepository, WalletTransactionMapper walletTransactionMapper, WalletRepository walletRepository, ApplicationEventPublisher eventPublisher, JwtService jwtService) {
         this.walletTransactionRepository = walletTransactionRepository;
         this.walletTransactionMapper = walletTransactionMapper;
         this.walletRepository = walletRepository;
         this.eventPublisher = eventPublisher;
+        this.jwtService = jwtService;
     }
 
     public List<WalletTransaction> getAllWalletTransaction(Long walletId) {
@@ -39,12 +46,16 @@ public class WalletTransactionService {
 
     @Transactional
     public WalletTransaction createWalletTransaction(Long walletId, CreateWalletTransactionRequest createWalletTransactionRequest){
+
+
+
         // 1️⃣ Find wallet
         WalletEntity wallet = walletRepository.findById(walletId)
                 .orElseThrow(() -> new RuntimeException("Wallet not found"));
         //Convert request entity
        var transaction = walletTransactionMapper.createWalletTransactionToEntity(createWalletTransactionRequest);
        transaction.setWalletEntity(wallet);
+
 
        //Update wallet balance
         BigDecimal currentBalance = wallet.getTotalAmount();
@@ -63,16 +74,29 @@ public class WalletTransactionService {
        var saveTransaction  = walletTransactionRepository.save(transaction);
 
         // --- Publish event AFTER successful save ---
+        AuthenticatedUser user = SecurityUtils.getCurrentUser();
+        String txn = generateTransactionId();
+
         eventPublisher.publishEvent(new MoneyAddedEvent(
                 this,
-"sumaiyaanika23@gmail.com",
-"Sumaiya Anika",
+                user.email(),
+                user.name(),
                 createWalletTransactionRequest.amount(),
                 wallet.getTotalAmount(),
-                "1"
+                txn
         ));
 
        return walletTransactionMapper.entityToWalletTransactionDomain(saveTransaction);
 
+    }
+
+
+    // ─── Private Helper Methods ───────────────────────────────
+
+    private String generateTransactionId() {
+        String timestamp = LocalDateTime.now()
+                .format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+        String random = String.valueOf((int)(Math.random() * 900000) + 100000);
+        return "TXN-" + timestamp + "-" + random;
     }
 }

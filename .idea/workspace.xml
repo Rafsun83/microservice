@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2478c75-bb84-4635-9ad8-2b203fda78fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/model/dto/user/AuthenticatedUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/mapper/WalletTransactionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/mapper/WalletTransactionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/security/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletTransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletTransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/utils/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/utils/SecurityUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +26,7 @@
       <list>
         <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -85,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777054370151</updated>
-      <workItem from="1777054373002" duration="9450000" />
+      <workItem from="1777054373002" duration="25466000" />
     </task>
     <servers />
   </component>
