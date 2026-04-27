@@ -28,15 +28,14 @@ public class WalletTransactionService {
     private final WalletTransactionMapper walletTransactionMapper;
     private final WalletRepository walletRepository;
     private final ApplicationEventPublisher eventPublisher;   // ← inject this
-    private final JwtService jwtService;
 
 
-    public WalletTransactionService(WalletTransactionRepository walletTransactionRepository, WalletTransactionMapper walletTransactionMapper, WalletRepository walletRepository, ApplicationEventPublisher eventPublisher, JwtService jwtService) {
+    public WalletTransactionService(WalletTransactionRepository walletTransactionRepository, WalletTransactionMapper walletTransactionMapper, WalletRepository walletRepository, ApplicationEventPublisher eventPublisher) {
         this.walletTransactionRepository = walletTransactionRepository;
         this.walletTransactionMapper = walletTransactionMapper;
         this.walletRepository = walletRepository;
         this.eventPublisher = eventPublisher;
-        this.jwtService = jwtService;
+
     }
 
     public List<WalletTransaction> getAllWalletTransaction(Long walletId) {
@@ -56,7 +55,6 @@ public class WalletTransactionService {
        var transaction = walletTransactionMapper.createWalletTransactionToEntity(createWalletTransactionRequest);
        transaction.setWalletEntity(wallet);
 
-
        //Update wallet balance
         BigDecimal currentBalance = wallet.getTotalAmount();
         BigDecimal transactionAmount = transaction.getAmount();
@@ -69,14 +67,12 @@ public class WalletTransactionService {
         }
         //Save wallet with updated balance
         walletRepository.save(wallet);
-
         //Create and Save Transaction
        var saveTransaction  = walletTransactionRepository.save(transaction);
 
         // --- Publish event AFTER successful save ---
         AuthenticatedUser user = SecurityUtils.getCurrentUser();
         String txn = generateTransactionId();
-
         eventPublisher.publishEvent(new MoneyAddedEvent(
                 this,
                 user.email(),
