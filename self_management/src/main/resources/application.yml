@@ -1,0 +1,18 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: rafsun7774@gmail.com
+    password: ygqritxseeiqqdqq       # Use Gmail App Password, not login password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+app:
+  mail:
+    from: rafsun7774@gmail.com
+    from-name: "spring-mail"

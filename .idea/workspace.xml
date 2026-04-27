@@ -4,35 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
-    </list>
+    <list default="true" id="f2478c75-bb84-4635-9ad8-2b203fda78fe" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Rafsun83"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Rafsun83/microservice.git",
-    "accountId": "5feeadb5-75cf-4db1-9ab4-a39261c7a783"
-  }
-}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="3ArGRsL0ctBFZkoqzFZGaMiYmHk" />
+  <component name="ProjectId" id="3CoaRVP0NmqXxL8UJaOma9UUEEj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,87 +41,63 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SelfManagementApplication.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mail-service-implementation&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rafsun-jani/Desktop/Personal/JavaB7/microservice&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/narcos/src/main/java/com/example/narcos" />
-      <recent name="$PROJECT_DIR$/narcos/src/main/java" />
-    </key>
+  <component name="RunManager" selected="Spring Boot.NarcosApplication">
+    <configuration name="NarcosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="narcos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.narcos.NarcosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelfManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="self_management" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.self_management.SelfManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="daeb4912-b4a2-49fb-9891-3fb217bb192e" name="Changes" comment="" />
-      <created>1773343271253</created>
+      <changelist id="f2478c75-bb84-4635-9ad8-2b203fda78fe" name="Changes" comment="" />
+      <created>1777054370151</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1773343271253</updated>
-      <workItem from="1773343272528" duration="927000" />
-      <workItem from="1773344211170" duration="4094000" />
-      <workItem from="1773428314600" duration="4405000" />
-      <workItem from="1773475041939" duration="4920000" />
-      <workItem from="1773481993548" duration="29000" />
-      <workItem from="1773482385293" duration="1065000" />
-      <workItem from="1773519527737" duration="6372000" />
-      <workItem from="1773606086778" duration="254000" />
-      <workItem from="1773606354429" duration="477000" />
-      <workItem from="1773606844300" duration="596000" />
-      <workItem from="1773607453543" duration="532000" />
-      <workItem from="1773649411350" duration="5869000" />
-      <workItem from="1774961020978" duration="594000" />
-      <workItem from="1774961625679" duration="726000" />
-      <workItem from="1774974551488" duration="1153000" />
-      <workItem from="1774980717260" duration="3170000" />
-      <workItem from="1775131697507" duration="3323000" />
-      <workItem from="1775331421702" duration="16000" />
-      <workItem from="1775332153144" duration="663000" />
-      <workItem from="1775370787528" duration="2802000" />
-      <workItem from="1775374366891" duration="76000" />
-      <workItem from="1775374455547" duration="96000" />
-      <workItem from="1775374565358" duration="166000" />
-      <workItem from="1775374745330" duration="1531000" />
-      <workItem from="1775376570456" duration="122000" />
-      <workItem from="1775376709411" duration="741000" />
-      <workItem from="1775377552152" duration="14720000" />
-      <workItem from="1775708349884" duration="9001000" />
-      <workItem from="1776323550136" duration="5452000" />
+      <updated>1777054370151</updated>
+      <workItem from="1777054373002" duration="27120000" />
+      <workItem from="1777266249299" duration="297000" />
+      <workItem from="1777284148801" duration="320000" />
+      <workItem from="1777285615272" duration="5000" />
+      <workItem from="1777287219583" duration="11000" />
+      <workItem from="1777287311427" duration="12000" />
+      <workItem from="1777287566676" duration="24000" />
+      <workItem from="1777305435475" duration="2517000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/self_management" />
-    </ignored-roots>
-    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

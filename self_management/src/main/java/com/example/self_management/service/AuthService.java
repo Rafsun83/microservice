@@ -29,8 +29,6 @@ public class AuthService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private RefreshTokenRepository refreshTokenRepository;
 
     public void register(User requestUser) {
         UserEntity user = new UserEntity();
@@ -58,15 +56,15 @@ public class AuthService {
         String userAgent = httpRequest.getHeader("User-Agent");
         String ipAddress = RequestUtils.getClientIp(httpRequest);
 
-        // 3️⃣ Generate tokens
-        String accessToken = jwtService.generateAccessToken(user.getId());
+        // 3️⃣ Generate tokens and here you can pass what you expect from the toke, I expected user full info that's why I passed user
+        String accessToken = jwtService.generateAccessToken(user);
         RefreshTokenEntity refreshTokenEntity = refreshTokenService.createRefreshToken(user, userAgent, ipAddress, loginRequest.getDeviceId());
         return new JwtResponse(accessToken, refreshTokenEntity.getRefreshToken());
     }
 
     public JwtResponse refreshToken(String token) {
         RefreshTokenEntity refreshToken = refreshTokenService.verifyRefreshToken(token);
-        String accessToken = jwtService.generateAccessToken(refreshToken.getUserEntity().getId());
+        String accessToken = jwtService.generateAccessToken(refreshToken.getUserEntity());
         return new JwtResponse(accessToken, token);
     }
 
