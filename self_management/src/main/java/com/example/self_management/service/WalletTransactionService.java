@@ -48,7 +48,7 @@ public class WalletTransactionService {
 
 
 
-        // 1️⃣ Find wallet
+        // 1️. Find wallet
         WalletEntity wallet = walletRepository.findById(walletId)
                 .orElseThrow(() -> new RuntimeException("Wallet not found"));
         //Convert request entity
@@ -83,7 +83,6 @@ public class WalletTransactionService {
         ));
 
        return walletTransactionMapper.entityToWalletTransactionDomain(saveTransaction);
-
     }
 
 
