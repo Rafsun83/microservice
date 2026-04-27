@@ -23,7 +23,7 @@ public class CorsConfig {
         return new CorsFilter(source);
     }
 
-//    or
+//or
 //@CrossOrigin(origins = "http://localhost:3000")
 //@RestController
 //@RequestMapping("/api/auth")
