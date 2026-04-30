@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2478c75-bb84-4635-9ad8-2b203fda78fe" name="Changes" comment="" />
+    <list default="true" id="f2478c75-bb84-4635-9ad8-2b203fda78fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/config/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/model/domain/MoneyAddedMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/config/AsyncConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/config/AsyncConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/event/email/MoneyAddedEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/event/email/MoneyAddedEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletTransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletTransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +61,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.SelfManagementApplication.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;mail-service-implementation&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;implement-rabbitMQ&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -94,6 +103,9 @@
       <workItem from="1777287311427" duration="12000" />
       <workItem from="1777287566676" duration="24000" />
       <workItem from="1777305435475" duration="2517000" />
+      <workItem from="1777461196628" duration="1683000" />
+      <workItem from="1777474455803" duration="4397000" />
+      <workItem from="1777571520286" duration="515000" />
     </task>
     <servers />
   </component>

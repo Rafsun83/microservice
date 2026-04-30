@@ -1,9 +1,12 @@
 spring:
+  profiles:
+    active: local  # ← remove this line, values are directly here
+
   mail:
     host: smtp.gmail.com
     port: 587
     username: rafsun7774@gmail.com
-    password: ygqritxseeiqqdqq       # Use Gmail App Password, not login password
+    password: ygqritxseeiqqdqq
     properties:
       mail:
         smtp:
@@ -11,6 +14,11 @@ spring:
           starttls:
             enable: true
             required: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 app:
   mail:
