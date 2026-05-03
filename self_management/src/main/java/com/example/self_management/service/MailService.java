@@ -55,6 +55,41 @@ public class MailService {
         } catch (MessagingException | java.io.UnsupportedEncodingException e) {
             throw new RuntimeException("Failed to send email: " + e.getMessage(), e);
         }
-
     }
+
+    // NEW method — for periodic updates
+    public void sendPeriodicUpdateEmail(String email, String name) {
+        try{
+            String body = String.format(
+                    "Hello %s,\n\nHere's your periodic update from E-Wallet.\n" +
+                            "Stay safe and keep transacting!\n\n— The E-Wallet Team",
+                    name
+            );
+
+            // Build MIME message
+            MimeMessage message = mailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+            helper.setFrom(fromEmail, fromName);
+            helper.setTo(email);
+            helper.setSubject("Weekly transaction update!! ");
+            helper.setText(body, true);  // true = HTML
+            mailSender.send(message);
+            log.info("Email has been sent successfully to {}",email);
+
+        }
+        catch (MessagingException  | java.io.UnsupportedEncodingException e) {
+            throw new RuntimeException("Failed to send email: " + e.getMessage(), e);
+        }
+    }
+
+
+    // Common helper method
+//    private void sendSimpleEmail(String to, String subject, String body) {
+//        SimpleMailMessage mail = new SimpleMailMessage();
+//        mail.setTo(to);
+//        mail.setSubject(subject);
+//        mail.setText(body);
+//        mailSender.send(mail);
+//        log.info("Email sent to {}", to);
+//    }
 }
