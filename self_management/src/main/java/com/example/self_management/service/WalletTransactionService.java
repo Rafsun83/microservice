@@ -1,9 +1,10 @@
 package com.example.self_management.service;
 
 import com.example.self_management.config.RabbitMQConfig;
+import com.example.self_management.enums.email.EmailType;
 import com.example.self_management.enums.walletsTransaction.TransactionType;
 import com.example.self_management.mapper.WalletTransactionMapper;
-import com.example.self_management.model.domain.MoneyAddedMessage;
+import com.example.self_management.model.domain.EmailMessage;
 import com.example.self_management.model.domain.WalletTransaction;
 import com.example.self_management.model.dto.user.AuthenticatedUser;
 import com.example.self_management.model.dto.walletTransaction.CreateWalletTransactionRequest;
@@ -14,7 +15,6 @@ import com.example.self_management.persistence.repository.WalletTransactionRepos
 import com.example.self_management.utils.SecurityUtils;
 import jakarta.transaction.Transactional;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -74,13 +74,14 @@ public class WalletTransactionService {
         AuthenticatedUser user = SecurityUtils.getCurrentUser();
         String txn = generateTransactionId();
 
-        MoneyAddedMessage message = new MoneyAddedMessage(
-                user.email(),
-                user.name(),
-                createWalletTransactionRequest.amount(),
-                wallet.getTotalAmount(),
-                txn
-        );
+        EmailMessage message = EmailMessage.builder()
+                .type(EmailType.MONEY_ADDED)        // ← key part
+                .userEmail(user.email())
+                .userName(user.name())
+                .amount(createWalletTransactionRequest.amount())
+                .newBalance(wallet.getTotalAmount())
+                .transactionId(txn)
+                .build();
 
         rabbitTemplate.convertAndSend(
                 RabbitMQConfig.EXCHANGE,      // exchange
