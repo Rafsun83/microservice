@@ -8,10 +8,15 @@ services:
     restart: always
     depends_on:
       - mysql
+      - rabbitmq
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/self_management
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: password
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: admin
+      SPRING_RABBITMQ_PASSWORD: admin123
     expose:
       - "8080"
     networks:
@@ -23,10 +28,15 @@ services:
     restart: always
     depends_on:
       - mysql
+      - rabbitmq
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/self_management
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: password
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: admin
+      SPRING_RABBITMQ_PASSWORD: admin123
     expose:
       - "8080"
     networks:

@@ -14,6 +14,7 @@ spring:
           starttls:
             enable: true
             required: true
+  #This is connecting the application with the rabbitMQ
   rabbitmq:
     host: localhost
     port: 5672
