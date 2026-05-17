@@ -34,6 +34,27 @@ public class RabbitMQConfig {
     }
 
     // ───NOTIFICATION SERVICE ─────────────────────────────────────────────
+    public static final String NOTIFICATION_EXCHANGE    = "notification.exchange";
+    public static final String NOTIFICATION_QUEUE       = "notification.queue";
+    public static final String NOTIFICATION_ROUTING_KEY = "notification.transaction";
+
+    @Bean
+    public TopicExchange notificationExchange(){
+        return new TopicExchange(NOTIFICATION_EXCHANGE);
+    }
+
+    @Bean
+    public Queue notificationQueue(){
+        return QueueBuilder.durable(NOTIFICATION_QUEUE).build();
+    }
+
+    @Bean
+    public Binding notificationBinding(Queue notificationQueue, TopicExchange notificationExchange){
+        return BindingBuilder
+                .bind(notificationQueue)
+                .to(notificationExchange)
+                .with(NOTIFICATION_ROUTING_KEY);
+    }
 
 
 
