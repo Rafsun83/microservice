@@ -2,9 +2,11 @@ package com.example.self_management.service;
 
 import com.example.self_management.config.RabbitMQConfig;
 import com.example.self_management.enums.email.EmailType;
+import com.example.self_management.enums.notification.NotificationType;
 import com.example.self_management.enums.walletsTransaction.TransactionType;
 import com.example.self_management.mapper.WalletTransactionMapper;
 import com.example.self_management.model.domain.EmailMessage;
+import com.example.self_management.model.domain.NotificationMessage;
 import com.example.self_management.model.domain.WalletTransaction;
 import com.example.self_management.model.dto.user.AuthenticatedUser;
 import com.example.self_management.model.dto.walletTransaction.CreateWalletTransactionRequest;
@@ -84,10 +86,27 @@ public class WalletTransactionService {
                 .build();
 
         rabbitTemplate.convertAndSend(
-                RabbitMQConfig.EXCHANGE,      // exchange
-                RabbitMQConfig.ROUTING_KEY,   // routing key
+                RabbitMQConfig.EMAIL_EXCHANGE,      // exchange
+                RabbitMQConfig.EMAIL_ROUTING_KEY,   // routing key
                 message                       // payload (auto serialized to JSON)
         );
+
+        NotificationMessage notificationMessage = NotificationMessage.builder()
+                .userId(user.userId())
+                .userEmail(user.email())
+                .notificationType(NotificationType.TRANSACTION)
+                .amount(createWalletTransactionRequest.amount())
+                .balanceAfter(wallet.getTotalAmount())
+                .referenceId(txn)
+                .timestamp(LocalDateTime.now())
+                .build();
+
+        rabbitTemplate.convertAndSend(
+                RabbitMQConfig.NOTIFICATION_EXCHANGE,
+                RabbitMQConfig.NOTIFICATION_ROUTING_KEY,
+                notificationMessage
+        );
+
 
        return walletTransactionMapper.entityToWalletTransactionDomain(saveTransaction);
     }

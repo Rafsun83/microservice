@@ -14,7 +14,7 @@ public class EmailConsumer {
 
     private final MailService mailService;
 
-    @RabbitListener(queues = RabbitMQConfig.QUEUE)
+    @RabbitListener(queues = RabbitMQConfig.EMAIL_QUEUE)
     public void consume(EmailMessage message) {
         log.info("Received email task: type={}, to={}", message.getType(), message.getUserEmail());
 

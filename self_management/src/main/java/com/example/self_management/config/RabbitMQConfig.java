@@ -9,33 +9,57 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQConfig {
-    // ─── Constants ─────────────────────────────────────────────
-    public static final String EXCHANGE   = "email.exchange";
-    public static final String QUEUE      = "email.queue";
-    public static final String ROUTING_KEY = "email.money.added";
 
-    // ─── Exchange ───────────────────────────────────────────────
+    // ───EMAIL SERVICE ─────────────────────────────────────────────
+    public static final String EMAIL_EXCHANGE   = "email.exchange";
+    public static final String EMAIL_QUEUE      = "email.queue";
+    public static final String EMAIL_ROUTING_KEY = "email.money.added";
+
     @Bean
-    public TopicExchange walletExchange() {
-        return new TopicExchange(EXCHANGE);
+    public TopicExchange emailExchange() {
+        return new TopicExchange(EMAIL_EXCHANGE);
     }
 
-    // ─── Queue ──────────────────────────────────────────────────
     @Bean
-    public Queue walletMailQueue() {
-        return QueueBuilder.durable(QUEUE).build();  // durable = survives RabbitMQ restart
+    public Queue emailQueue() {
+        return QueueBuilder.durable(EMAIL_QUEUE).build();  // durable = survives RabbitMQ restart
     }
 
-    // ─── Binding ────────────────────────────────────────────────
     @Bean
-    public Binding binding(Queue walletMailQueue, TopicExchange walletExchange) {
+    public Binding emailBinding(Queue emailQueue, TopicExchange emailExchange) {
         return BindingBuilder
-                .bind(walletMailQueue)
-                .to(walletExchange)
-                .with(ROUTING_KEY);
+                .bind(emailQueue)
+                .to(emailExchange)
+                .with(EMAIL_ROUTING_KEY);
     }
 
-    // ─── JSON Converter ─────────────────────────────────────────
+    // ───NOTIFICATION SERVICE ─────────────────────────────────────────────
+    public static final String NOTIFICATION_EXCHANGE    = "notification.exchange";
+    public static final String NOTIFICATION_QUEUE       = "notification.queue";
+    public static final String NOTIFICATION_ROUTING_KEY = "notification.transaction";
+
+    @Bean
+    public TopicExchange notificationExchange(){
+        return new TopicExchange(NOTIFICATION_EXCHANGE);
+    }
+
+    @Bean
+    public Queue notificationQueue(){
+        return QueueBuilder.durable(NOTIFICATION_QUEUE).build();
+    }
+
+    @Bean
+    public Binding notificationBinding(Queue notificationQueue, TopicExchange notificationExchange){
+        return BindingBuilder
+                .bind(notificationQueue)
+                .to(notificationExchange)
+                .with(NOTIFICATION_ROUTING_KEY);
+    }
+
+
+
+
+    // ─── Shared JSON Converter & Template ───────────────────────────
     @Bean
     public Jackson2JsonMessageConverter messageConverter() {
         return new Jackson2JsonMessageConverter();  // serialize objects as JSON

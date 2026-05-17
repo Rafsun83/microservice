@@ -39,8 +39,8 @@ public class EmailScheduler {
                     .build();
 
             rabbitTemplate.convertAndSend(
-                    RabbitMQConfig.EXCHANGE,      // your exchange name
-                    RabbitMQConfig.ROUTING_KEY,   // your routing key
+                    RabbitMQConfig.EMAIL_EXCHANGE,      // your exchange name
+                    RabbitMQConfig.EMAIL_ROUTING_KEY,   // your routing key
                     message
             );
         });
