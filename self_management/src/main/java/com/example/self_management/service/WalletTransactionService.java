@@ -84,8 +84,8 @@ public class WalletTransactionService {
                 .build();
 
         rabbitTemplate.convertAndSend(
-                RabbitMQConfig.EXCHANGE,      // exchange
-                RabbitMQConfig.ROUTING_KEY,   // routing key
+                RabbitMQConfig.EMAIL_EXCHANGE,      // exchange
+                RabbitMQConfig.EMAIL_ROUTING_KEY,   // routing key
                 message                       // payload (auto serialized to JSON)
         );
 

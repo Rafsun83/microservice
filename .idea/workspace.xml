@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2478c75-bb84-4635-9ad8-2b203fda78fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/self_management/src/main/resources/db/migration/V2__update_wallet_type.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/self_management/src/main/resources/db/migration/V3__update_wallet_type.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/enums/wallets/WalletType.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/enums/wallets/WalletType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self_management/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/event/email/EmailConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/event/email/EmailConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/scheduler/EmailScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/scheduler/EmailScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletTransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/self_management/src/main/java/com/example/self_management/service/WalletTransactionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.SelfManagementApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "migration-process-implement",
+    "git-widget-placeholder": "implement-notification-service",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
