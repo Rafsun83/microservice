@@ -35,6 +35,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()  // ← THIS LINE added newly for protected routes error.
+                        .requestMatchers("/ws/**").permitAll()   // ← allow WebSocket handshake
                         .requestMatchers("/api/auth/**")
                         .permitAll()
                         .anyRequest().authenticated())

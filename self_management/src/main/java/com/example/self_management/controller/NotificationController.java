@@ -43,4 +43,13 @@ public class NotificationController {
         });
         return ResponseEntity.ok().build();
     }
+
+    @PutMapping("/{id}/allread")
+    public ResponseEntity<Void> markAllRead(@PathVariable Long id){
+        List<NotificationEntity> notifications = notificationRepository.findAllByUserId(id);
+        System.out.println("notifications" + notifications);
+        notifications.forEach(notification -> notification.setRead(true));
+        notificationRepository.saveAll(notifications);
+        return ResponseEntity.ok().build();
+    }
 }
